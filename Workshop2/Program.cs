@@ -66,6 +66,21 @@
             Console.WriteLine($"\n Position of 7: {position}");
             Console.WriteLine();
 
+            Console.WriteLine("=== Task 5: DateTime and TimeSpan ===");
+            DateTime birthDate = new DateTime(2004, 5, 24);
+            DateTime currentDate = DateTime.Now;
+
+            TimeSpan ageSpan = currentDate - birthDate;
+            int ageYears = (int)(ageSpan.TotalDays / 365.25);
+
+            Console.WriteLine($"Birthdate: {birthDate.ToShortDateString()}");
+            Console.WriteLine($"Current Date: {currentDate.ToShortDateString()}");
+            Console.WriteLine($"Age: {ageYears} years");
+
+            DateTime newDate = birthDate.AddDays(10);
+            Console.WriteLine($"Birthdate + 10 days: {newDate.ToShortDateString()}");
+            Console.WriteLine();
+
         }
 
 
