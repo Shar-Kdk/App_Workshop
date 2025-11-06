@@ -49,17 +49,28 @@
             Console.WriteLine($"String to Double: {stringToDouble}");
             Console.WriteLine();
 
+            Console.WriteLine("=== Task 4: Arrays and Array Methods ===");
+            int[] numbers = { 9, 2, 7, 4, 1 };
 
+            Array.Sort(numbers);
+            Console.WriteLine("Sorted array:");
+            foreach (int n in numbers)
+                Console.Write(n + " ");
 
+            Array.Reverse(numbers);
+            Console.WriteLine("\n Reversed array:");
+            foreach (int n in numbers)
+                Console.Write(n + " ");
 
+            int position = Array.IndexOf(numbers, 7);
+            Console.WriteLine($"\n Position of 7: {position}");
+            Console.WriteLine();
 
-            Console.ReadLine();
         }
 
 
         public class Circle
         {
-            // Pi constant
             public const float pi = 3.14F;
             public int radius;
 
