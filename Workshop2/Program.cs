@@ -16,11 +16,13 @@
             Console.WriteLine($"Hello {userName}!, Your lucky number is {luckyNumber}.");
             Console.WriteLine();
 
+
             Console.WriteLine("=== Task 2: Constants and Circle Class ===");
             Circle circle = new Circle(6);
             System.Console.WriteLine("Area: " + circle.CalculateArea());
             System.Console.WriteLine("Perimeter: " + circle.CalculatePerimater());
             Console.WriteLine();
+
 
             Console.WriteLine("=== Task 3: Data Types and Type Conversion ===");
             byte b = 10;
@@ -48,6 +50,7 @@
             Console.WriteLine($"Integer to String: {intToString}");
             Console.WriteLine($"String to Double: {stringToDouble}");
             Console.WriteLine();
+
 
             Console.WriteLine("=== Task 4: Arrays and Array Methods ===");
             int[] numbers = { 9, 2, 7, 4, 1 };
@@ -80,6 +83,28 @@
             DateTime newDate = birthDate.AddDays(10);
             Console.WriteLine($"Birthdate + 10 days: {newDate.ToShortDateString()}");
             Console.WriteLine();
+
+
+            Console.WriteLine("=== Task 6: Generic Collections (List and Dictionary) ===");
+            List<string> fruits = new List<string> { "Apple", "Mango", "Banana" };
+            fruits.Add("Orange");
+            fruits.Remove("Mango");
+
+            Console.WriteLine("Fruits List:");
+            foreach (string fruit in fruits)
+                Console.WriteLine(fruit);
+
+            Dictionary<int, string> fruitDict = new Dictionary<int, string>
+            {
+                {1, "Apple"},
+                {2, "Banana"},
+                {3, "Orange"}
+            };
+            fruitDict.Add(4, "Grapes");
+
+            Console.WriteLine("\nFruit Dictionary:");
+            foreach (var pair in fruitDict)
+                Console.WriteLine($"ID: {pair.Key}, Name: {pair.Value}");
 
         }
 
